@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="ua" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" />
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Створити онлайн-резюме за допомогою Jekyll | Портал з документацією</title><meta property="og:title" content="Створити онлайн-резюме за допомогою Jekyll" />
+<meta property="og:description" content="Одним із моїх перших проектів на Jekyll було моє резюме у вигляді односторінкового сайта. Хоча багато HR та рекрутерів усе ще віддають перевагу класичному PDF, я вирішив спробувати зробити онлайн-резюме. Зрештою, так просто надіслати посилання на своє резюме. У цій статті я покажу, як створити своє онлайн-резюме, використовуючи Jekyll як генератор статичних сайтів і Vercel для компіляції та розміщення вашого сайта в інтернеті.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivancheban.github.io/ua/docs/static-site-generators/online-resume/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2021-09-12T20:36:47+03:00" /><meta property="og:site_name" content="Портал з документацією" />
+
+<meta itemprop="name" content="Створити онлайн-резюме за допомогою Jekyll">
+<meta itemprop="description" content="Одним із моїх перших проектів на Jekyll було моє резюме у вигляді односторінкового сайта. Хоча багато HR та рекрутерів усе ще віддають перевагу класичному PDF, я вирішив спробувати зробити онлайн-резюме. Зрештою, так просто надіслати посилання на своє резюме. У цій статті я покажу, як створити своє онлайн-резюме, використовуючи Jekyll як генератор статичних сайтів і Vercel для компіляції та розміщення вашого сайта в інтернеті.
+">
+<meta itemprop="dateModified" content="2021-09-12T20:36:47+03:00" />
+<meta itemprop="wordCount" content="583">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Створити онлайн-резюме за допомогою Jekyll"/>
+<meta name="twitter:description" content="Одним із моїх перших проектів на Jekyll було моє резюме у вигляді односторінкового сайта. Хоча багато HR та рекрутерів усе ще віддають перевагу класичному PDF, я вирішив спробувати зробити онлайн-резюме. Зрештою, так просто надіслати посилання на своє резюме. У цій статті я покажу, як створити своє онлайн-резюме, використовуючи Jekyll як генератор статичних сайтів і Vercel для компіляції та розміщення вашого сайта в інтернеті.
+"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.daeedb31adbea0c80764c83451f6aec5ebe2fb6b0aeaab03f8a784a719e75d4d.css" as="style">
+<link href="/scss/main.min.daeedb31adbea0c80764c83451f6aec5ebe2fb6b0aeaab03f8a784a719e75d4d.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="/css/prism.css"/>
+
+
+<script src="https://hypothes.is/embed.js" async></script>
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/ua/">
+		<span class="navbar-logo"><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512"><g><g><path style="fill:#b9bbc1" d="M416 0H64c-8.82.0-16 7.176-16 16v448c0 8.82 7.18 16 16 16h352c8.82.0 16-7.18 16-16V16C432 7.176 424.82.0 416 0z"/></g><g><path style="fill:#d8dce1" d="M384 32H32c-8.82.0-16 7.176-16 16v448c0 8.82 7.18 16 16 16h352c8.82.0 16-7.18 16-16V48C4e2 39.176 392.82 32 384 32z"/></g><g><g><g><path style="fill:#5c546a" d="M328 120H72c-4.422.0-8-3.582-8-8s3.578-8 8-8h256c4.422.0 8 3.582 8 8S332.422 120 328 120z"/></g></g><g><g><path style="fill:#8b8996" d="M328 216H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 216 328 216z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 440H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 440 328 440z"/></g></g><g><g><path style="fill:#8b8996" d="M328 312H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 312 328 312z"/></g></g><g><g><path style="fill:#5c546a" d="M136 152H72c-4.422.0-8-3.582-8-8s3.578-8 8-8h64c4.422.0 8 3.582 8 8s-3.578 8-8 8z"/></g></g><g><g><path style="fill:#5c546a" d="M328 152H168c-4.422.0-8-3.582-8-8s3.578-8 8-8h160c4.422.0 8 3.582 8 8S332.422 152 328 152z"/></g></g><g><g><path style="fill:#8b8996" d="M264 184H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h192c4.422.0 8 3.578 8 8S268.422 184 264 184z"/></g></g><g><g><path style="fill:#8b8996" d="M328 184h-32c-4.422.0-8-3.578-8-8s3.578-8 8-8h32c4.422.0 8 3.578 8 8S332.422 184 328 184z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 408H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 408 328 408z"/></g></g><g><g><path style="fill:#8b8996" d="M136 344H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h64c4.422.0 8 3.578 8 8s-3.578 8-8 8z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 344H168c-4.422.0-8-3.578-8-8s3.578-8 8-8h160c4.422.0 8 3.578 8 8S332.422 344 328 344z"/></g></g><g><g><path style="fill:#b9bbc1" d="M264 376H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h192c4.422.0 8 3.578 8 8S268.422 376 264 376z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 376h-32c-4.422.0-8-3.578-8-8s3.578-8 8-8h32c4.422.0 8 3.578 8 8S332.422 376 328 376z"/></g></g><g><g><path style="fill:#8b8996" d="M176 248H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h104c4.422.0 8 3.578 8 8s-3.578 8-8 8z"/></g></g><g><g><path style="fill:#8b8996" d="M328 248H208c-4.422.0-8-3.578-8-8s3.578-8 8-8h120c4.422.0 8 3.578 8 8S332.422 248 328 248z"/></g></g><g><g><path style="fill:#8b8996" d="M240 280H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h168c4.422.0 8 3.578 8 8s-3.578 8-8 8z"/></g></g><g><g><path style="fill:#8b8996" d="M328 280h-56c-4.422.0-8-3.578-8-8s3.578-8 8-8h56c4.422.0 8 3.578 8 8S332.422 280 328 280z"/></g></g></g><g><g><path style="fill:#8b8996" d="M448 448l16.337 54.458c2.28 7.602 13.045 7.602 15.325.0L496 448H448z"/></g><g><circle style="fill:#8b8996" cx="472" cy="176" r="24"/></g><g><rect x="448" y="176" style="fill:#ffd200" width="48" height="272"/></g><g><rect x="448" y="176" style="fill:#ff9600" width="24" height="272"/></g><g><path style="fill:#5c546a" d="M457.6 480l6.737 22.458c2.28 7.602 13.045 7.602 15.325.0L486.4 480H457.6z"/></g></g></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg></span><span class="text-uppercase font-weight-bold">Портал з документацією</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a  class="nav-link active" href="/ua/docs/" ><span class="active">Документація</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Українська
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/docs/static-site-generators/online-resume/">English</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Пошук по сайту…" aria-label="Пошук по сайту…" autocomplete="off">
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center d-lg-none">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Пошук по сайту…" aria-label="Пошук по сайту…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    <div class="nav-item dropdown d-block d-lg-none">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Українська
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/docs/static-site-generators/online-resume/">English</a>
+	
+</div>
+    </div>
+    
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/ua/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Документація</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="uadocs">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/ua/docs/static-site-generators/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Генератори статичних сайтів</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="uadocsstatic-site-generators">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsstatic-site-generatorsjekyll" href="/ua/docs/static-site-generators/jekyll/">Jekyll</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsstatic-site-generatorsjekyll-api" href="/ua/docs/static-site-generators/jekyll-api/">Сайт для документації API на Jekyll</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page  active" id="m-uadocsstatic-site-generatorsonline-resume" href="/ua/docs/static-site-generators/online-resume/">Створити онлайн-резюме за допомогою Jekyll</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsstatic-site-generatorshugo-install" href="/ua/docs/static-site-generators/hugo-install/">Установити Hugo</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsstatic-site-generatorsremove-hugo" href="/ua/docs/static-site-generators/remove-hugo/">Видалити Hugo</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsstatic-site-generatorshugo-api" href="/ua/docs/static-site-generators/hugo-api/">Сайт для документації API на Hugo</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/ua/docs/vale/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Лінтер Vale</a>
+  </li>
+  <ul>
+    <li class="collapse " id="uadocsvale">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsvaleinstall-vale" href="/ua/docs/vale/install-vale/">Установити Vale</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsvaleconfigure-vale" href="/ua/docs/vale/configure-vale/">Налаштувати Vale</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsvalevale-styleguides" href="/ua/docs/vale/vale-styleguides/">Стаття про стайлгайди та Vale</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/ua/docs/madcap-flare/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">MadCap Flare</a>
+  </li>
+  <ul>
+    <li class="collapse " id="uadocsmadcap-flare">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsmadcap-flareconnect-madcap-to-git" href="/ua/docs/madcap-flare/connect-madcap-to-git/">Підключити MadCap Flare до Git</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-uadocsmadcap-flarebuild-error" href="/ua/docs/madcap-flare/build-error/">Помилка білда MadCap</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://github.com/ivancheban/docsy-site/edit/master/content/ua/docs/static-site-generators/online-resume.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Редагувати цю сторінку</a>
+<a href="https://github.com/ivancheban/docsy-site/new/master/content/ua/docs/static-site-generators/online-resume.md?filename=change-me.md&amp;value=---%0D%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0D%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0D%0Aweight%3A&#43;100%0D%0Adescription%3A&#43;%3E-%0D%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0D%0A---%0D%0A%0D%0A%23%23&#43;Heading%0D%0A%0D%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0D%0A%0D%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0D%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0D%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0D%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0D%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Створити дочірню сторінку</a>
+<a href="https://github.com/ivancheban/docsy-site/issues/new?title=%d0%a1%d1%82%d0%b2%d0%be%d1%80%d0%b8%d1%82%d0%b8%20%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d1%80%d0%b5%d0%b7%d1%8e%d0%bc%d0%b5%20%d0%b7%d0%b0%20%d0%b4%d0%be%d0%bf%d0%be%d0%bc%d0%be%d0%b3%d0%be%d1%8e%20Jekyll" target="_blank"><i class="fab fa-github fa-fw"></i> Створити запит</a>
+
+
+<a href="https://github.com/ivancheban/docsy-site/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Створити запит по проекту</a>
+
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#передумови">Передумови</a></li>
+    <li><a href="#завантажте-тему">Завантажте тему</a></li>
+    <li><a href="#запустіть-сайт-локально">Запустіть сайт локально</a>
+      <ul>
+        <li><a href="#відредагуйте-конфігураційний-файл">Відредагуйте конфігураційний файл</a></li>
+        <li><a href="#установіть-bundler">Установіть Bundler</a></li>
+        <li><a href="#скомпілюйте-сайт">Скомпілюйте сайт</a></li>
+      </ul>
+    </li>
+    <li><a href="#відредагуйте-своє-резюме">Відредагуйте своє резюме</a></li>
+    <li><a href="#опублікуйте-сайт-в-інтернеті">Опублікуйте сайт в інтернеті</a>
+      <ul>
+        <li><a href="#опублікувати-на-github">Опублікувати на GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#публікація-сайта-за-допомогою-сервіса-vercel">Публікація сайта за допомогою сервіса Vercel</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://ivancheban.github.io/ua/docs/">Документація</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://ivancheban.github.io/ua/docs/static-site-generators/">Генератори статичних сайтів</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://ivancheban.github.io/ua/docs/static-site-generators/online-resume/">Створити онлайн-резюме за допомогою Jekyll</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Створити онлайн-резюме за допомогою Jekyll</h1>
+    <div class="lead">Одним із моїх перших проектів на Jekyll було моє резюме у вигляді односторінкового сайта. Хоча багато HR та рекрутерів усе ще віддають перевагу класичному PDF, я вирішив спробувати зробити онлайн-резюме. Зрештою, так просто надіслати посилання на своє резюме. У цій статті я покажу, як створити своє онлайн-резюме, використовуючи Jekyll як генератор статичних сайтів і Vercel для компіляції та розміщення вашого сайта в інтернеті.</div>
+	
+        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 3 minute read</p>
+           
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Наша мета — створити й опублікувати односторінковий сайт-резюме за допомогою Jekyll і Vercel. Кінцевий результат буде виглядати так:</p>
+<p><a href="https://online-cv-master.vercel.app">https://online-cv-master.vercel.app</a></p>
+
+</div>
+
+<h2 id="передумови">Передумови</h2>
+<blockquote>
+<p>Припустимо, що на вашому комп’ютері встановлено Jekyll, клієнт Git та редактор Visual Studio Code. Якщо ні, спочатку прочитайте статтю про <a href="https://docsy-site.netlify.app/docs/static-site-generators/jekyll/">Jekyll</a>.</p>
+</blockquote>
+<p>Щоб перевірити, чи встановлений у вас Jekyll:</p>
+<ol>
+<li>
+<p>Відкрийте командний рядок.</p>
+<p><img src="/docs/img/open-cmd.png" alt="img"></p>
+</li>
+<li>
+<p>Уведіть <code>jekyll -v</code> і натисніть <strong>Enter</strong>.</p>
+<p><img src="/docs/img/jekyll-version.png" alt="img"></p>
+</li>
+</ol>
+<p>Щоб перевірити, чи встановлені Git і VSCode:</p>
+<ol>
+<li>
+<p>У командному рядку введіть <code>git --version</code>.</p>
+<p><img src="/docs/img/git-version.png" alt="img"></p>
+</li>
+<li>
+<p>Переконайтесь, що у вас установлено Visual Studio Code.</p>
+<p><img src="/docs/img/open-vscode.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="завантажте-тему">Завантажте тему</h2>
+<blockquote>
+<p>Є багато безкоштовних попередньо налаштованих тем для Jekyll, які можна завантажити з GitHub. Ви можете переглянути список тем для генераторів статичних сайтів на <a href="https://jamstackthemes.dev/">JAMstack Themes</a>. Я використав <a href="https://jamstackthemes.dev/theme/jekyll-online-cv/">цю тему</a> для мого онлайн-резюме.</p>
+</blockquote>
+<p>Щоб завантажити тему Jekyll для вашого онлайн-резюме:</p>
+<ol>
+<li>
+<p>Перейдіть до <a href="https://github.com/sharu725/online-cv">репозиторію GitHub</a> для цієї теми.</p>
+</li>
+<li>
+<p>Виберіть <strong>Code</strong>.</p>
+</li>
+<li>
+<p>Виберіть <strong>Download ZIP</strong>.</p>
+<p><img src="/docs/img/download-theme.png" alt="img"></p>
+</li>
+<li>
+<p>Збережіть архівовану папку проекту на свій комп’ютер.</p>
+</li>
+<li>
+<p>Розпакуйте папку.</p>
+</li>
+</ol>
+<hr>
+<h2 id="запустіть-сайт-локально">Запустіть сайт локально</h2>
+<blockquote>
+<p>Перш ніж змінювати дані у цьому резюме, давайте перевіримо, як сайт працює локально на вашому комп’ютері.</p>
+</blockquote>
+<h3 id="відредагуйте-конфігураційний-файл">Відредагуйте конфігураційний файл</h3>
+<p>Щоб відредагувати файл <code>_config.yml</code>:</p>
+<ol>
+<li>
+<p>Відкрийте папку проекту у VSCode.</p>
+</li>
+<li>
+<p>Виберіть файл <code>_config.yml</code>.</p>
+<p><img src="/docs/img/config.yml.png" alt="img"></p>
+</li>
+<li>
+<p>Видаліть цей рядок: <code>baseurl: '/online-cv' #change it according to your repository name</code>.</p>
+</li>
+<li>
+<p>Видаліть рядки нижче <code># Development Settings</code>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">port: 4000
+host: 0.0.0.0
+safe: false
+</code></pre></div></li>
+</ol>
+<p>Ось як має виглядати ваш файл <code>_config.yml</code>.
+<br/></p>
+<p><img src="/docs/img/edited-config.png" alt="img"></p>
+<hr>
+<h3 id="установіть-bundler">Установіть Bundler</h3>
+<p>Щоб установити Bundler:</p>
+<ol>
+<li>
+<p>У провіднику файлів скопіюйте шлях до папки проекту.</p>
+<p>У моєму випадку це <code>c:\Users\ivanc\online-cv-master</code></p>
+<p><img src="/docs/img/project-folder-path.png" alt="img"></p>
+</li>
+<li>
+<p>У командному рядку змініть каталог на шлях до папки проекту. Натисніть <strong>Enter</strong>.</p>
+<p><code>cd c:\Users\ivanc\online-cv-master\</code></p>
+</li>
+<li>
+<p>Уведіть <code>gem install bundler</code> і натисніть <strong>Enter</strong>.</p>
+</li>
+<li>
+<p>Уведіть такі команди:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">bundle init
+bundle install
+</code></pre></div><p><img src="/docs/img/install-bundler.png" alt="img"></p>
+<p>Ці команди створили нові файли <code>Gemfile</code> у папці проекту.</p>
+</li>
+<li>
+<p>Відкрийте <code>Gemfile</code> за домогою Блокнота.</p>
+<p><img src="/docs/img/gemfile-edit.png" alt="img"></p>
+</li>
+<li>
+<p>Видаліть усе в цьому файлі.</p>
+</li>
+<li>
+<p>Введіть наступні дані та збережіть файл.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">source &#34;https://rubygems.org&#34;
+
+gem &#34;jekyll&#34;
+</code></pre></div><p><img src="/docs/img/notepad-edit-gemfile.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h3 id="скомпілюйте-сайт">Скомпілюйте сайт</h3>
+<p>Щоб скомпілювати наш сайт за допомогою Jekyll локально:</p>
+<ol>
+<li>
+<p>Уведіть <code>jekyll serve</code> і натисніть <strong>Enter</strong>.</p>
+<p><img src="/docs/img/jekyll-serve-resume.png" alt="img"></p>
+</li>
+<li>
+<p>Скопіюйте адресу сервера:</p>
+<p><a href="http://127.0.0.1:4000/online-cv/">http://127.0.0.1:4000/online-cv/</a></p>
+</li>
+<li>
+<p>Вставте адресу сервера у свій браузер, і ви побачите, як ваш сайт запуститься локально.</p>
+<p><img src="/docs/img/site-served-locally.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="відредагуйте-своє-резюме">Відредагуйте своє резюме</h2>
+<blockquote>
+<p>Тепер, коли ви скомпілювали сайт з резюме, час замінити в ньому дані на власні.</p>
+</blockquote>
+<p>Щоб відредагувати дані у своєму резюме:</p>
+<ol>
+<li>
+<p>У VSCode відкрийте папку проекту й виберіть файл <code>data.yml</code>.</p>
+<p><img src="/docs/img/data.yml.png" alt="img"></p>
+</li>
+<li>
+<p>Замініть дані в резюме на власні.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Примітка</h4>
+
+    Коли ви змінюєте дані в резюме, зміни на сайті, запущеному локально, застосовуються автоматично. Оновіть сторінку у браузері, щоб побачити зміни.
+
+</div>
+
+</li>
+</ol>
+<hr>
+<h2 id="опублікуйте-сайт-в-інтернеті">Опублікуйте сайт в інтернеті</h2>
+<blockquote>
+<p>Коли закінчите редагувати сайт локально, час опублікувати його в інтернеті, щоб його бачили всі. Для цього прикладу я використаю іншу приємну платформу для розгортання та розміщення вашого сайта, Vercel. Але спочатку потрібно завантажити папку проекту на GitHub.</p>
+</blockquote>
+<h3 id="опублікувати-на-github">Опублікувати на GitHub</h3>
+<p>Щоб завантажити папку проекту на GitHub:</p>
+<ol>
+<li>
+<p>У VSCode відкрийте папку проекту.</p>
+</li>
+<li>
+<p>Виберіть піктограму <strong>Source Control</strong>.</p>
+<p><img src="/docs/img/source-control.png" alt="img"></p>
+</li>
+<li>
+<p>Виберіть <strong>Publish to GitHub</strong>.</p>
+</li>
+<li>
+<p>Виберіть <strong>Publish to GitHub public repository</strong>.</p>
+<p><img src="/docs/img/publish-public-repo.png" alt="img"></p>
+<p>Коли папку проекту буде завантажено до репозиторія GitHub, ви побачите це повідомлення про успішне завершення операції.</p>
+<p><img src="/docs/img/publish-message.png" alt="img"></p>
+</li>
+<li>
+<p>Виберіть <strong>Open in GitHub</strong>, щоб переглянути папку проекту, завантажену та синхронізовану з репозиторієм GitHub.</p>
+<p><img src="/docs/img/github-repo.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="публікація-сайта-за-допомогою-сервіса-vercel">Публікація сайта за допомогою сервіса Vercel</h2>
+<p>Щоб опублікувати свій сайт в інтернеті, скористайтесь сервісом Vercel.</p>
+<ol>
+<li>
+<p>Перейдіть на сторінку <a href="https://vercel.com/login">Vercel</a>.</p>
+</li>
+<li>
+<p>Виберіть <strong>Continue with GitHub</strong>.</p>
+<p><img src="/docs/img/vercel-login.png" alt="img"></p>
+</li>
+<li>
+<p>Виберіть <strong>Import Project</strong>.</p>
+<p><img src="/docs/img/import-project.png" alt="img"></p>
+</li>
+<li>
+<p>Виберіть <strong>Continue</strong>, щоб імпортувати проект із GitHub.</p>
+<p><img src="/docs/img/import-git-repository.png" alt="img"></p>
+</li>
+<li>
+<p>Надайте посилання на ваш репозиторій GitHub і виберіть <strong>Continue</strong>:</p>
+<p><a href="https://github.com/ivancheban/online-cv-master">https://github.com/ivancheban/online-cv-master</a></p>
+<p><img src="/docs/img/link-to-repo.png" alt="img"></p>
+</li>
+<li>
+<p>Уведіть назву проекту: наприклад, <code>online-cv-master</code>. Виберіть <strong>Deploy</strong>.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Примітка</h4>
+
+    Ця назва буде використовуватися в посиланні на ваш сайт з резюме. Адресу вашого сайту можна буде змінити пізніше в налаштуваннях Vercel <strong>Domains</strong>.
+
+</div>
+
+<p><img src="/docs/img/deploy-project.png" alt="img"></p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Примітка</h4>
+
+    Компіляція проекту займає кілька хвилин. Наберіться терпіння.
+
+</div>
+
+<p>Коли компіляція закінчиться, ви побачите цю веселу заставку про успішне завершення операції.</p>
+<p><img src="/docs/img/successful-deploy.gif" alt="img"></p>
+</li>
+<li>
+<p>Виберіть <strong>Visit</strong>, щоб перейти на сайт з вашим резюме, доступним онлайн.</p>
+<p>Маєте побачити сайт, подібний до цього:</p>
+<p><a href="https://online-cv-master.vercel.app/">https://online-cv-master.vercel.app/</a></p>
+</li>
+</ol>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/ivancheban/doscy-site/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/ivancheban/doscy-site/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Останні зміни 12.09.2021: <a  href="https://github.com/ivancheban/docsy-site/commit/fe7265ce9d49e259ae6dc5fd32cb633aaaa12a9a">added pages (fe7265c)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Send email" aria-label="Send email">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:ivancheban@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="LinkedIn" aria-label="LinkedIn">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/ivan-cheban-a24b576">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Telegram" aria-label="Telegram">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="http://t.me/ivan_cheban">
+      <i class="fab fa-telegram"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/ivancheban/docsy-site">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 Ivan Cheban — Усі права застережено</small>
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.8.1/dist/mermaid.min.js" integrity="sha384-to2w0I1OqmbJ9J6yTnIX+KYU8grNpZoD1dKPLjgEJvMe5L5+/7qvuNa2sQo8WAWj" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.a3ce0e39147ea6d94983ca557f4527f6dddc3d95cfed7d1ab6f58977a157851d.js" integrity="sha256-o84OORR&#43;ptlJg8pVf0Un9t3cPZXP7X0atvWJd6FXhR0=" crossorigin="anonymous"></script>
+
+
+
+<script src='/js/prism.js'></script>
+
+
+
+  </body>
+</html>

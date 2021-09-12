@@ -1,0 +1,1471 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.78.1" /><link rel="canonical" type="text/html" href="/docs/static-site-generators/">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Static Site Generators | Documentation Portal</title><meta property="og:title" content="Static Site Generators" />
+<meta property="og:description" content="Find out how to use various SSGs.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/static-site-generators/" />
+<meta property="og:site_name" content="Documentation Portal" />
+<meta itemprop="name" content="Static Site Generators">
+<meta itemprop="description" content="Find out how to use various SSGs.
+">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Static Site Generators"/>
+<meta name="twitter:description" content="Find out how to use various SSGs.
+"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.fd85b079554ad3ae06ed50b2d7a82a2331d3d26bb33aa9e7727c6706107a021c.css" as="style">
+<link href="/scss/main.min.fd85b079554ad3ae06ed50b2d7a82a2331d3d26bb33aa9e7727c6706107a021c.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+<script src="https://hypothes.is/embed.js" async></script>
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512"><g><g><path style="fill:#b9bbc1" d="M416 0H64c-8.82.0-16 7.176-16 16v448c0 8.82 7.18 16 16 16h352c8.82.0 16-7.18 16-16V16C432 7.176 424.82.0 416 0z"/></g><g><path style="fill:#d8dce1" d="M384 32H32c-8.82.0-16 7.176-16 16v448c0 8.82 7.18 16 16 16h352c8.82.0 16-7.18 16-16V48C4e2 39.176 392.82 32 384 32z"/></g><g><g><g><path style="fill:#5c546a" d="M328 120H72c-4.422.0-8-3.582-8-8s3.578-8 8-8h256c4.422.0 8 3.582 8 8S332.422 120 328 120z"/></g></g><g><g><path style="fill:#8b8996" d="M328 216H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 216 328 216z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 440H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 440 328 440z"/></g></g><g><g><path style="fill:#8b8996" d="M328 312H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 312 328 312z"/></g></g><g><g><path style="fill:#5c546a" d="M136 152H72c-4.422.0-8-3.582-8-8s3.578-8 8-8h64c4.422.0 8 3.582 8 8S140.422 152 136 152z"/></g></g><g><g><path style="fill:#5c546a" d="M328 152H168c-4.422.0-8-3.582-8-8s3.578-8 8-8h160c4.422.0 8 3.582 8 8S332.422 152 328 152z"/></g></g><g><g><path style="fill:#8b8996" d="M264 184H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h192c4.422.0 8 3.578 8 8S268.422 184 264 184z"/></g></g><g><g><path style="fill:#8b8996" d="M328 184h-32c-4.422.0-8-3.578-8-8s3.578-8 8-8h32c4.422.0 8 3.578 8 8S332.422 184 328 184z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 408H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h256c4.422.0 8 3.578 8 8S332.422 408 328 408z"/></g></g><g><g><path style="fill:#8b8996" d="M136 344H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h64c4.422.0 8 3.578 8 8S140.422 344 136 344z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 344H168c-4.422.0-8-3.578-8-8s3.578-8 8-8h160c4.422.0 8 3.578 8 8S332.422 344 328 344z"/></g></g><g><g><path style="fill:#b9bbc1" d="M264 376H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h192c4.422.0 8 3.578 8 8S268.422 376 264 376z"/></g></g><g><g><path style="fill:#b9bbc1" d="M328 376h-32c-4.422.0-8-3.578-8-8s3.578-8 8-8h32c4.422.0 8 3.578 8 8S332.422 376 328 376z"/></g></g><g><g><path style="fill:#8b8996" d="M176 248H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h104c4.422.0 8 3.578 8 8S180.422 248 176 248z"/></g></g><g><g><path style="fill:#8b8996" d="M328 248H208c-4.422.0-8-3.578-8-8s3.578-8 8-8h120c4.422.0 8 3.578 8 8S332.422 248 328 248z"/></g></g><g><g><path style="fill:#8b8996" d="M240 280H72c-4.422.0-8-3.578-8-8s3.578-8 8-8h168c4.422.0 8 3.578 8 8S244.422 280 240 280z"/></g></g><g><g><path style="fill:#8b8996" d="M328 280h-56c-4.422.0-8-3.578-8-8s3.578-8 8-8h56c4.422.0 8 3.578 8 8S332.422 280 328 280z"/></g></g></g><g><g><path style="fill:#8b8996" d="M448 448l16.337 54.458c2.28 7.602 13.045 7.602 15.325.0L496 448H448z"/></g><g><circle style="fill:#8b8996" cx="472" cy="176" r="24"/></g><g><rect x="448" y="176" style="fill:#ffd200" width="48" height="272"/></g><g><rect x="448" y="176" style="fill:#ff9600" width="24" height="272"/></g><g><path style="fill:#5c546a" d="M457.6 480l6.737 22.458c2.28 7.602 13.045 7.602 15.325.0L486.4 480H457.6z"/></g></g></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg></span><span class="text-uppercase font-weight-bold">Documentation Portal</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a  class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/ua/docs/static-site-generators/">Українська</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.6aaddc0dd5efa7fd15c411bb74dbbee9.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/static-site-generators/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Static Site Generators</h1>
+<div class="lead">Find out how to use various SSGs.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-b715517d7592b106e10f1a025abd0578">Jekyll</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-3761ac575e80430f8cbf4cb441e90c2b">Jekyll API site</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-03d0c32be2f6394b14480c343e2b060f">Create online CV with Jekyll</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-086e36e1af15c7619db8ee38ef6f89a8">How to install Hugo on Windows</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-4b9ef2527760cdfa5d0d3f11792bbfea">Hugo API documentation site</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-5e2baa65e699c316d141b4f390fcb349">How to remove Hugo from Windows</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>This section is about setting up various static site generators.</p>
+
+</div>
+
+<p>In these tutorials I will share my experience in setting up SSG such as Jekyll, Hugo, etc.</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-b715517d7592b106e10f1a025abd0578">1 - Jekyll</h1>
+    <div class="lead">When I first started exploring the CI/CD and the SSGs, the first generator that I learned was Jekyll. I used <a href="https://idratherbewriting.com/documentation-theme-jekyll/">Getting started with the Documentation Theme for Jekyll</a> by Tom Johnson, the famous guru of technical writing known by his <a href="https://idratherbewriting.com/">I&rsquo;d Rather Be Writing blog</a>. So without too many words, let&rsquo;s start building our first documentation portal using Tom&rsquo;s Jekyll theme. I will try to explain even the evident things.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Our goal is to build and publish the documentation site using Jekyll and Netlify. The end result will look like this: <a href="https://sample-jekyll.netlify.app">https://sample-jekyll.netlify.app</a></p>
+
+</div>
+
+<h2 id="download-the-theme-from-the-github-repo">Download the theme from the GitHub repo</h2>
+<ol>
+<li>
+<p>Sign up for GitHub.</p>
+<p><img src="/docs/img/sign-up-GitHub.png" alt="img"></p>
+</li>
+<li>
+<p>If you already have the account there, sign in.</p>
+<p><img src="/docs/img/sign-in-GitHub.png" alt="img"></p>
+</li>
+<li>
+<p>Go to <a href="https://github.com/tomjoht/documentation-theme-jekyll">Tom&rsquo;s repository</a>.</p>
+<p><img src="/docs/img/tom-repo.png" alt="img"></p>
+</li>
+<li>
+<p>Click the <strong>Code</strong> button and select <strong>Download ZIP</strong>.</p>
+<p><img src="/docs/img/download-zip.png" alt="img"></p>
+</li>
+<li>
+<p>Save the ZIP file to your computer and unzip the contents where you like. Now you have the folder with code and content. Let&rsquo;s proceed with building our documentation site from all this.</p>
+</li>
+</ol>
+<hr>
+<h2 id="install-ruby-on-windows">Install Ruby on Windows</h2>
+<blockquote>
+<p>Before we install Jekyll that compiles our site, we need to install Ruby. Jekyll is a Ruby-based program and needs Ruby to run.</p>
+</blockquote>
+<ol>
+<li>
+<p>Go to <a href="https://rubyinstaller.org/downloads/">RubyInstaller for Windows</a>.</p>
+</li>
+<li>
+<p>Install the recommended <strong>Ruby+Devkit 2.6.X (x64)</strong> version.</p>
+<p><img src="/docs/img/ruby-installer.png" alt="img"></p>
+</li>
+<li>
+<p>Install everything by default.</p>
+<p><img src="/docs/img/installation-ruby.png" alt="img"></p>
+</li>
+<li>
+<p>When the installation completes, you see this command prompt screen. Press <strong>Enter</strong>`** two times when prompted.</p>
+<p><img src="/docs/img/ruby-installed.png" alt="img"></p>
+</li>
+<li>
+<p>When the installation in the command prompt exits, let&rsquo;s assume that we have Ruby installed. If you want to make sure, open the command prompt and type <code>ruby -v</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/check-ruby-version.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="install-jekyll">Install Jekyll</h2>
+<ol>
+<li>
+<p>To install Jekyll, enter <code>gem install jekyll</code> in the command prompt and press <strong>Enter</strong>.</p>
+</li>
+<li>
+<p>Check if Jekyll has been installed properly: enter <code>jekyll -v</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/check-jekyll-version.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="install-bundler">Install Bundler</h2>
+<ol>
+<li>
+<p>Browse to the directory where you downloaded the Documentation theme for Jekyll.</p>
+</li>
+<li>
+<p>Delete the existing <code>Gemfile</code> and <code>Gemfile.lock</code> files.</p>
+<p><img src="/docs/img/project-folder.png" alt="img"></p>
+</li>
+</ol>
+<h3 id="change-directory">Change directory</h3>
+<p>First, you need to change the directory in the Command Prompt.</p>
+<ol>
+<li>
+<p>In your file explorer, copy the path to the unzipped folder with your project.</p>
+<p><img src="/docs/img/path-to-project-folder.png" alt="img"></p>
+</li>
+<li>
+<p>In the Command prompt, enter <code>cd</code> and right-click to paste the copied path.</p>
+</li>
+<li>
+<p>Press <strong>Enter</strong> to change the directory. Now you can execute commands in the project directory.</p>
+<p><img src="/docs/img/paste-path-command-prompt.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h3 id="install-bundler-1">Install Bundler</h3>
+<ol>
+<li>
+<p>To install Bundler, enter <code>gem install bundler</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/gem-install-bundler.png" alt="img"></p>
+</li>
+<li>
+<p>Enter the following commands:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">bundle init
+bundle install
+</code></pre></div><p><img src="/docs/img/bundle-init-bundle-install.png" alt="img"></p>
+<p>These commands created new <code>Gemfile</code> files in your project folder.</p>
+</li>
+<li>
+<p>Open the <code>Gemfile</code> with Notepad.</p>
+<p><img src="/docs/img/gemfile.png" alt="img"></p>
+</li>
+<li>
+<p>Delete everything in this file.</p>
+</li>
+<li>
+<p>Enter the following data and save the file.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">source &#34;https://rubygems.org&#34;
+
+gem &#34;jekyll&#34;
+</code></pre></div><p><img src="/docs/img/notepad-edit-gemfile.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="build-the-site">Build the site</h2>
+<p>To build your Jekyll site locally:</p>
+<ol>
+<li>
+<p>Change the directory in the Command Prompt: <code>cd documentation-theme-jekyll-gh-pages</code>.</p>
+</li>
+<li>
+<p>Enter <code>jekyll serve</code>.</p>
+</li>
+<li>
+<p>To access the site locally, copy the address from the Command Prompt: <a href="http://127.0.0.1:4000/">http://127.0.0.1:4000</a></p>
+<p><img src="/docs/img/jekyll-serve.png" alt="img"></p>
+</li>
+<li>
+<p>Paste the address in your browser and you will see the site.</p>
+<p><img src="/docs/img/site-built-locally.png" alt="img"></p>
+<p>You can access all the site content locally from the project folder.</p>
+</li>
+</ol>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To stop the local server where your site is served, press <code>Ctrl+C</code> in the Command Prompt.
+
+</div>
+
+<hr>
+<h2 id="cicd-github-and-ide">CI/CD, GitHub and IDE</h2>
+<blockquote>
+<p>Before you publish your site online, you need to create the CI/CD pipeline. While this term sounds mysterious, there is nothing complicated about it.</p>
+<p>You need to have an editor on your computer where you will change the code and content of your site. This editor should be able to send the changes that you&rsquo;ve made to your GitHub repository. It&rsquo;s like a Dropbox folder that syncs your local folder to the cloud.</p>
+<p>For this example, I will use Visual Studio Code editor/IDE.</p>
+</blockquote>
+<h3 id="vscode-editor">VSCode editor</h3>
+<p>Install VSCode from its <a href="https://code.visualstudio.com/download">official site</a>.</p>
+<p><img src="/docs/img/download-vscode.png" alt="img"></p>
+<p>Useful links for setting up VSCode for viewing and editing Markdown files:</p>
+<ul>
+<li><a href="https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto">Using Markdown with Visual Studio Code</a></li>
+<li><a href="https://medium.com/@michael.isprihanto/how-to-guide-markdown-in-visual-studio-code-e8a68cc01f64">How-To Guide: Markdown in Visual Studio Code</a></li>
+<li><a href="https://code.visualstudio.com/docs/languages/markdown">Markdown and Visual Studio Code</a></li>
+<li><a href="https://gitlab.com/svetlnovikova/webinar/-/blob/master/post-webinar-materials.md">Lana Novikova&rsquo;s materials about VScode</a> (In Russian)</li>
+</ul>
+<hr>
+<h3 id="git-client">Git client</h3>
+<blockquote>
+<p>You will also need Git client to connect VSCode to your GitHub repository. It&rsquo;s the same as using Word (in this case VSCode) to write/edit your document and Dropbox desktop client (in this case Git client) to sync your changes to the cloud server.</p>
+</blockquote>
+<ol>
+<li>
+<p>Install Git client from its <a href="https://git-scm.com/">official site</a>.</p>
+<p><img src="/docs/img/download-git-client.png" alt="img"></p>
+</li>
+<li>
+<p>Install everything by default. You may close the Git client window.</p>
+</li>
+</ol>
+<hr>
+<h3 id="view-project-folder-in-the-editor">View project folder in the editor</h3>
+<ol>
+<li>
+<p>Run the VSCode.</p>
+</li>
+<li>
+<p>Select <strong>File</strong> &gt; <strong>Open Folder</strong>.</p>
+<p><img src="/docs/img/open-project-folder-vscode.png" alt="img"></p>
+</li>
+<li>
+<p>Open the project folder.</p>
+<p><img src="/docs/img/open-project-folder.png" alt="img"></p>
+<p>Now you will see the folder contents in the VSCode editor. If you open the folder with content and click the <strong>.md</strong> file, you will see the file markup.</p>
+<p><img src="/docs/img/markdown-markup.png" alt="img"></p>
+<p>Now you can edit the files. But you need to upload this folder to your GitHub repository to sync the changes.</p>
+</li>
+</ol>
+<hr>
+<h3 id="upload-project-folder-to-github">Upload project folder to GitHub</h3>
+<ol>
+<li>
+<p>Go to the Source Control section of VSCode and click the <strong>Publish to GitHub</strong> button.</p>
+<p><img src="/docs/img/publish-to-github.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub public repository</strong>.</p>
+<p><img src="/docs/img/publish-to-public-repository.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Open in GitHub</strong> to open your newly created project repository in GitHub.</p>
+<p><img src="/docs/img/open-in-github.png" alt="img"></p>
+<p>You will see your project folder structure. Now your local folder is synced to the GitHub cloud server. Every change that you make locally will be synced to the GitHub server.</p>
+<p><img src="/docs/img/project-your-repository.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="publish-your-site">Publish your site</h2>
+<blockquote>
+<p>Now when you have built the Documentation Site locally, you wonder how to publish it online for everyone to see. Although Tom tells how to publish his site on GitHub Pages, I don&rsquo;t recommend this. There are better and easier ways for publishing the sites built with Static Site Generators. For this example I will use Netlify.</p>
+</blockquote>
+<ol>
+<li>
+<p>Sign up to <a href="https://www.netlify.com/">Netlify</a>.</p>
+<p><img src="/docs/img/netlify-signup.png" alt="img"></p>
+<p>Or log in, if you already have an account.</p>
+</li>
+<li>
+<p>Press the <strong>New site from Git</strong> button.</p>
+<p><img src="/docs/img/new-site-from-git.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>GitHub</strong> as your Git provider.</p>
+<p><img src="/docs/img/connect-to-github.png" alt="img"></p>
+</li>
+<li>
+<p>Authorize Netlify&rsquo;s access to your GitHub repository.</p>
+<p>You will see the list of your repositories.</p>
+</li>
+<li>
+<p>Pick the repository that you&rsquo;ve created in the previous step.</p>
+<p><img src="/docs/img/pick-repository.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Deploy site</strong>.</p>
+<p><img src="/docs/img/deploy-settings.png" alt="img"></p>
+<p>You will see Netlify deploying your site with some funny name.</p>
+<p><img src="/docs/img/deploy-progress.png" alt="img"></p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    The building of your site for the first time takes several minutes. Be patient. When the build finishes, you will see the <strong>Published</strong> status.
+
+</div>
+
+<p><img src="/docs/img/site-deployed.png" alt="img"></p>
+</li>
+<li>
+<p>Change the site name to something more relevant.</p>
+<p><img src="/docs/img/change-site-name.png" alt="img"></p>
+</li>
+<li>
+<p>Click the new site name to visit its page. My test site:</p>
+<p><a href="https://sample-jekyll.netlify.app/">https://sample-jekyll.netlify.app/</a></p>
+<p><img src="/docs/img/sample-jekyll-site.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="useful-links">Useful links</h2>
+<p>I used some help from these sites:</p>
+<ul>
+<li><a href="https://www.netlify.com/blog/2020/04/02/a-step-by-step-guide-jekyll-4.0-on-netlify/">https://www.netlify.com/blog/2020/04/02/a-step-by-step-guide-jekyll-4.0-on-netlify/</a></li>
+<li><a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/">https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/</a></li>
+<li><a href="https://idratherbewriting.com/documentation-theme-jekyll/index.html">https://idratherbewriting.com/documentation-theme-jekyll/index.html</a></li>
+<li><a href="https://github.com/tomjoht/documentation-theme-jekyll">https://github.com/tomjoht/documentation-theme-jekyll</a></li>
+<li><a href="https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line">https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3761ac575e80430f8cbf4cb441e90c2b">2 - Jekyll API site</h1>
+    <div class="lead">At some point, you start looking for a way to generate a site hosting the API documentation. Yes, all those API endpoints, calls, requests, and parameters illustrated by the code blocks. Tom Johnson, in his <a href="https://idratherbewriting.com/learnapidoc/">Documenting APIs guide</a> for technical writers shows the <a href="https://github.com/CloudCannon/aviator-jekyll-template">Aviator theme</a> for Jekyll as an example of the API documentation site. Let&rsquo;s publish this site using the instructions below.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Our goal is to build and publish the API documentation site using Jekyll and Vercel. The end result will look like this:</p>
+<p><a href="https://aviator-jekyll-template-master.vercel.app">https://aviator-jekyll-template-master.vercel.app</a></p>
+
+</div>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<blockquote>
+<p>Assume that you have Jekyll, Git client, and Visual Studio Code editor installed on your computer. If not, read the <a href="https://docsy-site.netlify.app/docs/static-site-generators/jekyll/">Jekyll</a> article first.</p>
+</blockquote>
+<p>To check that you have Jekyll installed:</p>
+<ol>
+<li>
+<p>Open Command Prompt.</p>
+<p><img src="/docs/img/open-cmd.png" alt="img"></p>
+</li>
+<li>
+<p>Enter <code>jekyll -v</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/jekyll-version.png" alt="img"></p>
+</li>
+</ol>
+<p>To check that you have Git and VSCode installed:</p>
+<ol>
+<li>
+<p>In the Command Prompt, enter <code>git --version</code>.</p>
+<p><img src="/docs/img/git-version.png" alt="img"></p>
+</li>
+<li>
+<p>Check that you have Visual Studio Code installed.</p>
+<p><img src="/docs/img/open-vscode.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="download-the-theme">Download the theme</h2>
+<p>To download the Jekyll theme for your API documentation site:</p>
+<ol>
+<li>
+<p>Go to the theme <a href="https://github.com/CloudCannon/aviator-jekyll-template">GitHub repository</a>.</p>
+</li>
+<li>
+<p>Select <strong>Code</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Download ZIP</strong>.</p>
+<p><img src="/docs/img/download-theme-aviator.png" alt="img"></p>
+</li>
+<li>
+<p>Save the zipped project folder to your computer.</p>
+</li>
+<li>
+<p>Unzip the folder.</p>
+</li>
+</ol>
+<hr>
+<h2 id="launch-the-site-locally">Launch the site locally</h2>
+<blockquote>
+<p>Before publishing this site online, let’s check how the site runs locally on your computer.</p>
+</blockquote>
+<h3 id="install-bundler">Install Bundler</h3>
+<ol>
+<li>
+<p>Browse to the location where you unzipped the project folder.</p>
+</li>
+<li>
+<p>Delete the existing <code>Gemfile</code> and <code>Gemfile.lock</code> files.</p>
+<p><img src="/docs/img/delete-gemlock-files.png" alt="img"></p>
+</li>
+<li>
+<p>In the file explorer, copy the path to the project folder.</p>
+<p>In my case, it’s <code>c:\Users\ivanc\aviator-jekyll-template-master\</code></p>
+<p><img src="/docs/img/project-folder-path-aviator.png" alt="img"></p>
+</li>
+<li>
+<p>In the Command Prompt, change the directory to your project folder path. Press <strong>Enter</strong>.</p>
+<p><code>cd c:\Users\ivanc\aviator-jekyll-template-master\</code></p>
+</li>
+<li>
+<p>Enter <code>gem install bundler</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/gem-install-bundler-aviator.png" alt="img"></p>
+</li>
+<li>
+<p>Enter the following commands.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">bundle init
+
+bundle install
+
+</code></pre></div><p><img src="/docs/img/bundle-init-bundle-install-aviator.png" alt="img"></p>
+<p>These commands created new <code>Gemfile</code> files in your project folder.</p>
+</li>
+</ol>
+<hr>
+<h3 id="bundle-update">Bundle update</h3>
+<ol>
+<li>
+<p>Open the <code>Gemfile</code> with Notepad.</p>
+<p><img src="/docs/img/gemfile-edit-aviator.png" alt="img"></p>
+</li>
+<li>
+<p>Delete everything in this file.</p>
+</li>
+<li>
+<p>Enter the following data and save the file.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">source <span style="color:#ed9d13">&#39;https://rubygems.org&#39;</span>
+
+gem <span style="color:#ed9d13">&#39;jekyll&#39;</span>, <span style="color:#ed9d13">&#39;3.7.2&#39;</span>
+gem <span style="color:#ed9d13">&#39;tzinfo-data&#39;</span>
+
+group <span style="color:#ed9d13">:jekyll_plugins</span> <span style="color:#6ab825;font-weight:bold">do</span>
+ gem <span style="color:#ed9d13">&#39;jekyll-seo-tag&#39;</span>, <span style="color:#ed9d13">&#39;2.4.0&#39;</span>
+ gem <span style="color:#ed9d13">&#39;jekyll-sitemap&#39;</span>, <span style="color:#ed9d13">&#39;1.2.0&#39;</span>
+<span style="color:#6ab825;font-weight:bold">end</span>
+</code></pre></div><p><img src="/docs/img/gemfile-aviator.png" alt="img"></p>
+</li>
+<li>
+<p>Enter <code>bundle update</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/bundle-update.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h3 id="build-the-site">Build the site</h3>
+<p>To build your Jekyll site locally:</p>
+<ol>
+<li>
+<p>Enter <code>bundle exec jekyll serve</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/bundle-exec-jekyll-serve.png" alt="img"></p>
+</li>
+<li>
+<p>Copy the server address:</p>
+<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></p>
+</li>
+<li>
+<p>Paste it in your browser and you should see your site served locally.</p>
+<p><img src="/docs/img/site-served-locally-aviator.png" alt="img"></p>
+</li>
+</ol>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To stop the local server where your site is served, press <code>Ctrl+C</code> in the Command Prompt.
+
+</div>
+
+<hr>
+<h2 id="publish-the-site-online">Publish the site online</h2>
+<blockquote>
+<p>When you finish editing the site locally, it’s time to publish it online for everybody to see. For this example, I will use the Vercel platform to deploy and host your site. But first you need to upload your project folder to GitHub.</p>
+</blockquote>
+<h3 id="publish-to-github">Publish to GitHub</h3>
+<p>To upload your project folder to GitHub:</p>
+<ol>
+<li>
+<p>In VSCode, open the project folder.</p>
+</li>
+<li>
+<p>Select the <strong>Source Control</strong> icon.</p>
+<p><img src="/docs/img/source-control.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub public repository</strong>.</p>
+<p><img src="/docs/img/publish-public-repo-aviator.png" alt="img"></p>
+<p>When the project folder has been uploaded to the GitHub repository, you will see this success message.</p>
+<p><img src="/docs/img/git-publish-message.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Open in GitHub</strong> to view your project folder uploaded and synced to the GitHub repository.</p>
+<p><img src="/docs/img/github-repo-aviator.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="deploy-to-vercel">Deploy to Vercel</h2>
+<p>To publish your site online, you need to deploy it to Vercel.</p>
+<ol>
+<li>
+<p>Go to <a href="https://vercel.com/login">Vercel</a>.</p>
+</li>
+<li>
+<p>Select <strong>Continue with GitHub</strong>.</p>
+<p><img src="/docs/img/vercel-login.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Import Project</strong>.</p>
+<p><img src="/docs/img/import-project.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Continue</strong> to import your project from GitHub.</p>
+<p><img src="/docs/img/import-git-repository.png" alt="img"></p>
+</li>
+<li>
+<p>Provide the link to your GitHub repository and select <strong>Continue</strong>:</p>
+<p><a href="https://github.com/ivancheban/aviator-jekyll-template-master">https://github.com/ivancheban/aviator-jekyll-template-master</a></p>
+<p><img src="/docs/img/link-to-repo-aviator.png" alt="img"></p>
+</li>
+<li>
+<p>Enter the project name: for example, <code>aviator-jekyll-template-master</code>. Select <strong>Deploy</strong>.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    This name will be used in the link to your site. You can always change the site name in the Vercel settings in <strong>Domains</strong>.
+
+</div>
+
+<p><img src="/docs/img/deploy-project-aviator.png" alt="img"></p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    The project deploy takes several minutes. Be patient.
+
+</div>
+
+<p>When the deploy finishes you will see this nice success screen.</p>
+<p><img src="/docs/img/site-published.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Visit</strong> to go to your API documentation site available online.</p>
+<p>You should see your site similar to this:</p>
+<p><a href="https://aviator-jekyll-template-master.vercel.app/">https://aviator-jekyll-template-master.vercel.app/</a></p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-03d0c32be2f6394b14480c343e2b060f">3 - Create online CV with Jekyll</h1>
+    <div class="lead">One of my first Jekyll sites was my resume available online. While many HRs and recruiters still prefer the classic PDF, I decided to give the online thing a try. After all, it’s so easy just to send the link to your CV. In this article, I will show you how to create your online CV using Jekyll as a static site generator and Vercel for deploying and hosting your site.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Our goal is to build and publish the one-page online resume site using Jekyll and Vercel. The end result will look like this:</p>
+<p><a href="https://online-cv-master.vercel.app">https://online-cv-master.vercel.app</a></p>
+
+</div>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<blockquote>
+<p>Assume that you have Jekyll, Git client, and Visual Studio Code editor installed on your computer. If not, read the <a href="https://docsy-site.netlify.app/docs/static-site-generators/jekyll/">Jekyll</a> article first.</p>
+</blockquote>
+<p>To check that you have Jekyll installed:</p>
+<ol>
+<li>
+<p>Open Command Prompt.</p>
+<p><img src="/docs/img/open-cmd.png" alt="img"></p>
+</li>
+<li>
+<p>Enter <code>jekyll -v</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/jekyll-version.png" alt="img"></p>
+</li>
+</ol>
+<p>To check that you have Git and VSCode installed:</p>
+<ol>
+<li>
+<p>In the Command Prompt, enter <code>git --version</code>.</p>
+<p><img src="/docs/img/git-version.png" alt="img"></p>
+</li>
+<li>
+<p>Check that you have Visual Studio Code installed.</p>
+<p><img src="/docs/img/open-vscode.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="download-the-theme">Download the theme</h2>
+<blockquote>
+<p>There are a lot of free preconfigured Jekyll themes that you can download from GitHub. You can view the list of themes for static site generators at <a href="https://jamstackthemes.dev/">JAMstack Themes</a>. I used <a href="https://jamstackthemes.dev/theme/jekyll-online-cv/">this theme</a> for my online resume.</p>
+</blockquote>
+<p>To download the Jekyll theme for your online resume:</p>
+<ol>
+<li>
+<p>Go to the theme <a href="https://github.com/sharu725/online-cv">GitHub repository</a>.</p>
+</li>
+<li>
+<p>Select <strong>Code</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Download ZIP</strong>.</p>
+<p><img src="/docs/img/download-theme.png" alt="img"></p>
+</li>
+<li>
+<p>Save the zipped project folder to your computer.</p>
+</li>
+<li>
+<p>Unzip the folder.</p>
+</li>
+</ol>
+<hr>
+<h2 id="launch-the-site-locally">Launch the site locally</h2>
+<blockquote>
+<p>Before changing the data in this CV, let’s check how the site runs locally on your computer.</p>
+</blockquote>
+<h3 id="edit-the-config-file">Edit the config file</h3>
+<p>To edit the <code>_config.yml</code> file:</p>
+<ol>
+<li>
+<p>Open the project folder in VSCode.</p>
+</li>
+<li>
+<p>Select the <code>_config.yml</code> file.</p>
+<p><img src="/docs/img/config.yml.png" alt="img"></p>
+</li>
+<li>
+<p>Delete the line: <code>baseurl: '/online-cv' #change it according to your repository name</code>.</p>
+</li>
+<li>
+<p>Delete the lines under the <code># Development Settings</code>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">port: 4000
+host: 0.0.0.0
+safe: false
+</code></pre></div></li>
+</ol>
+<p>This is how your <code>_config.yml</code> file should look.
+<br/></p>
+<p><img src="/docs/img/edited-config.png" alt="img"></p>
+<hr>
+<h3 id="install-bundler">Install Bundler</h3>
+<p>To install the Bundler:</p>
+<ol>
+<li>
+<p>In the file explorer, copy the path to the project folder.</p>
+<p>In my case, it’s <code>c:\Users\ivanc\online-cv-master</code></p>
+<p><img src="/docs/img/project-folder-path.png" alt="img"></p>
+</li>
+<li>
+<p>In the Command Prompt, change the directory to your project folder path. Press <strong>Enter</strong>.</p>
+<p><code>cd c:\Users\ivanc\online-cv-master\</code></p>
+</li>
+<li>
+<p>Enter <code>gem install bundler</code> and press <strong>Enter</strong>.</p>
+</li>
+<li>
+<p>Enter the following commands:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">bundle init
+bundle install
+</code></pre></div><p><img src="/docs/img/install-bundler.png" alt="img"></p>
+<p>These commands created new <code>Gemfile</code> files in your project folder.</p>
+</li>
+<li>
+<p>Open the <code>Gemfile</code> with Notepad.</p>
+<p><img src="/docs/img/gemfile-edit.png" alt="img"></p>
+</li>
+<li>
+<p>Delete everything in this file.</p>
+</li>
+<li>
+<p>Enter the following data and save the file.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">source &#34;https://rubygems.org&#34;
+
+gem &#34;jekyll&#34;
+</code></pre></div><p><img src="/docs/img/notepad-edit-gemfile.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h3 id="build-the-site">Build the site</h3>
+<p>To build your Jekyll site locally:</p>
+<ol>
+<li>
+<p>Enter <code>jekyll serve</code> and press <strong>Enter</strong>.</p>
+<p><img src="/docs/img/jekyll-serve-resume.png" alt="img"></p>
+</li>
+<li>
+<p>Copy the server address:</p>
+<p><a href="http://127.0.0.1:4000/online-cv/">http://127.0.0.1:4000/online-cv/</a></p>
+</li>
+<li>
+<p>Paste it in your browser and you should see your site served locally.</p>
+<p><img src="/docs/img/site-served-locally.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="edit-your-resume">Edit your resume</h2>
+<blockquote>
+<p>Now that you’ve built the resume site, it’s time to edit its data with your own.</p>
+</blockquote>
+<p>To edit the data in your resume:</p>
+<ol>
+<li>
+<p>In VSCode, open the project folder and select the <code>data.yml</code> file.</p>
+<p><img src="/docs/img/data.yml.png" alt="img"></p>
+</li>
+<li>
+<p>Edit the data in the resume with your own.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    When you edit the data in the resume, the changes are applied automatically to the site served locally. Refresh the page in your browser to see the changes.
+
+</div>
+
+</li>
+</ol>
+<hr>
+<h2 id="publish-the-site-online">Publish the site online</h2>
+<blockquote>
+<p>When you finish editing the site locally, it’s time to publish it online for everybody to see. For this example, I will use another nice platform to deploy and host your site, Vercel. But first you need to upload your project folder to GitHub.</p>
+</blockquote>
+<h3 id="publish-to-github">Publish to GitHub</h3>
+<p>To upload your project folder to GitHub:</p>
+<ol>
+<li>
+<p>In VSCode, open the project folder.</p>
+</li>
+<li>
+<p>Select the <strong>Source Control</strong> icon.</p>
+<p><img src="/docs/img/source-control.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub public repository</strong>.</p>
+<p><img src="/docs/img/publish-public-repo.png" alt="img"></p>
+<p>When the project folder has been uploaded to the GitHub repository, you will see this success message.</p>
+<p><img src="/docs/img/publish-message.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Open in GitHub</strong> to view your project folder uploaded and synced to the GitHub repository.</p>
+<p><img src="/docs/img/github-repo.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="deploy-to-vercel">Deploy to Vercel</h2>
+<p>To publish your site online, you need to deploy it to Vercel.</p>
+<ol>
+<li>
+<p>Go to <a href="https://vercel.com/login">Vercel</a>.</p>
+</li>
+<li>
+<p>Select <strong>Continue with GitHub</strong>.</p>
+<p><img src="/docs/img/vercel-login.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Import Project</strong>.</p>
+<p><img src="/docs/img/import-project.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Continue</strong> to import your project from GitHub.</p>
+<p><img src="/docs/img/import-git-repository.png" alt="img"></p>
+</li>
+<li>
+<p>Provide the link to your GitHub repository and select <strong>Continue</strong>:</p>
+<p><a href="https://github.com/ivancheban/online-cv-master">https://github.com/ivancheban/online-cv-master</a></p>
+<p><img src="/docs/img/link-to-repo.png" alt="img"></p>
+</li>
+<li>
+<p>Enter the project name: for example, <code>online-cv-master</code>. Select <strong>Deploy</strong>.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    This name will be used in the link to your site. You can always change the site name in the Vercel settings in <strong>Domains</strong>.
+
+</div>
+
+<p><img src="/docs/img/deploy-project.png" alt="img"></p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    The project deploy takes several minutes. Be patient.
+
+</div>
+
+<p>When the deploy finishes you will see this nice success screen.</p>
+<p><img src="/docs/img/successful-deploy.gif" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Visit</strong> to go to your resume site available online.</p>
+<p>You should see your site similar to this:</p>
+<p><a href="https://online-cv-master.vercel.app/">https://online-cv-master.vercel.app/</a></p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-086e36e1af15c7619db8ee38ef6f89a8">4 - How to install Hugo on Windows</h1>
+    <div class="lead">Hugo was my second static site generator after Jekyll. Now it&rsquo;s my favorite SSG. It has many nice features but its strongest advantage is the build time—the fastest among all other SSGs. In this article I will show you how to install Hugo on your Windows computer.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Our goal is to install Hugo on a computer running Windows.</p>
+
+</div>
+
+<h2 id="install-chocolatey">Install Chocolatey</h2>
+<blockquote>
+<p>First, go to the official <a href="https://gohugo.io/getting-started/installing/">Hugo installation page</a>. As you see, there&rsquo;s more than one way to skin a cat. I choose the Chocolatey option to install Hugo.</p>
+</blockquote>
+<p>To install Chocolatey:</p>
+<ol>
+<li>
+<p>Enter the following command in the Command Prompt. Press <strong>Enter</strong>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">@<span style="color:#ed9d13">&#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#ed9d13">&#34; [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#24909d">SET </span><span style="color:#ed9d13">&#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&#34;</span>
+</code></pre></div><p><img src="/docs/img/choco-install.png" alt="img"></p>
+</li>
+<li>
+<p>Check if you have Chocolatey installed: <code>choco version</code></p>
+<p><img src="/docs/img/choco-version.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="install-hugo">Install Hugo</h2>
+<p>There are two versions of Hugo: standard and extended. Install the extended version as some themes require it.</p>
+<ol>
+<li>
+<p>To install the Hugo extended version using Chocolatey, enter:</p>
+<p><code>choco install hugo-extended -confirm</code></p>
+<p><img src="/docs/img/hugo-install.png" alt="img"></p>
+</li>
+<li>
+<p>To check if Hugo is installed:</p>
+<p><code>hugo version</code></p>
+<p><img src="/docs/img/hugo-version-extended.png" alt="img"></p>
+<p>Now you are ready to start your journey with Hugo static site generator.</p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4b9ef2527760cdfa5d0d3f11792bbfea">5 - Hugo API documentation site</h1>
+    <div class="lead">I&rsquo;ve created about 10 different Hugo sites. So far it&rsquo;s my favorite static site generator. The build speed is less than a minute for every site that I&rsquo;ve deployed. However, the setup process for Hugo sites isn&rsquo;t very clear for me. I wish I had clear instructions on how to add a theme and publish it online. Lots of Hugo themes are available at <a href="https://jamstackthemes.dev/">JAMstack Themes</a>.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>In this example, let&rsquo;s build the API documentation site using the DocuAPI theme for Hugo static site generator. This Hugo theme is based on Slate. The end result will look similar to this site:</p>
+<p><a href="https://docuapi-test.netlify.app">https://docuapi-test.netlify.app</a></p>
+
+</div>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>
+<p>Check that you have Hugo installed: <code>hugo version</code>.</p>
+<p>If you don&rsquo;t have Hugo installed on your computer, read <a href="https://docsy-site.netlify.app/docs/static-site-generators/hugo-install/">How to install Hugo on Windows</a>.</p>
+</li>
+<li>
+<p>Check that you have Git client installed: <code>git version</code>.</p>
+<p>If you don&rsquo;t have Git client installed on your computer, read how to <a href="https://docsy-site.netlify.app/docs/static-site-generators/jekyll/#git-client">install Git client</a>.</p>
+</li>
+<li>
+<p>Check that you have:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">VSCode</a> installed on your computer</li>
+<li>A <a href="https://github.com/">GitHub</a> account</li>
+<li>A <a href="https://www.netlify.com/">Netlify</a> account</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="download-the-theme">Download the theme</h2>
+<p>To download the API documentation theme:</p>
+<ol>
+<li>
+<p>Go to the theme <a href="https://github.com/bep/docuapi">GitHub repository</a>.</p>
+<p><img src="/docs/img/docuapi-theme.png" alt="img"></p>
+</li>
+<li>
+<p>Download the zipped project folder.</p>
+<p><img src="/docs/img/download-theme-docuapi.png" alt="img"></p>
+</li>
+<li>
+<p>Unzip the project folder.</p>
+</li>
+</ol>
+<hr>
+<h2 id="create-hugo-project">Create Hugo project</h2>
+<p>To set up a new Hugo project on your computer:</p>
+<ol>
+<li>
+<p>In the Command Prompt, enter: <code>hugo new site docuapi</code> where <code>docuapi</code> is the name of the Hugo project you want to create.</p>
+<p><img src="/docs/img/hugo-new-site.png" alt="img"></p>
+</li>
+<li>
+<p>Copy the downloaded theme folder to the <code>theme</code> folder of your Hugo project.</p>
+<p>In my case, I copy the <code>docuapi-master</code> folder to <code>c:\Users\ivanc\docuapi\themes\</code>.</p>
+<p><img src="/docs/img/copy-theme-folder.png" alt="img"></p>
+</li>
+<li>
+<p>Rename the copied folder from <code>docuapi-master</code> to <code>docuapi</code>. This is the theme name.</p>
+<p><img src="/docs/img/renamed-folder.png" alt="img"></p>
+</li>
+<li>
+<p>Open the <code>exampleSite</code> folder in <code>c:\Users\ivanc\docuapi\themes\docuapi\exampleSite\</code>.</p>
+</li>
+<li>
+<p>Copy everything in the <code>exampleSite</code> folder in <code>c:\Users\ivanc\docuapi\themes\docuapi\exampleSite\</code> to the root of the project folder in <code>c:\Users\ivanc\docuapi\</code>. Replace the existing folders and files when asked.</p>
+<p><img src="/docs/img/copy-exampleSite.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="build-site-locally">Build site locally</h2>
+<blockquote>
+<p>Before publishing the site online, let&rsquo;s see how it looks locally.</p>
+</blockquote>
+<p>To build your Hugo site locally:</p>
+<ol>
+<li>
+<p>In the command prompt, change the folder path to your Hugo folder: <code>cd docuapi</code>. Press <strong>Enter</strong>.</p>
+</li>
+<li>
+<p>Enter <code>hugo server</code>. Press <strong>Enter</strong>.</p>
+<p>Your site is built and served on the local server.</p>
+</li>
+<li>
+<p>Copy the server address <a href="//localhost:1313/">//localhost:1313/</a> and paste it in your browser.</p>
+<p><img src="/docs/img/hugo-server.png" alt="img"></p>
+<p>You should see this site in your browser.</p>
+<p><img src="/docs/img/local-site.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h2 id="publish-site-online">Publish site online</h2>
+<blockquote>
+<p>You will use Netlify to deploy and host your Hugo API documentation site online. To publish your site online, you need to edit the configuration files and upload the project folder to GitHub first.</p>
+</blockquote>
+<h3 id="edit-the-configuration-file">Edit the configuration file</h3>
+<p>To edit the Hugo site configuration file:</p>
+<ol>
+<li>
+<p>Open the <code>docuapi</code> folder in VSCode.</p>
+</li>
+<li>
+<p>Select the <code>config.toml</code> file.</p>
+<p><img src="/docs/img/config.toml-file.png" alt="img"></p>
+</li>
+<li>
+<p>Edit the <code>config.toml</code> file.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">theme = <span style="color:#ed9d13">&#34;docuapi&#34;</span>
+<span style="color:#999;font-style:italic"># themesdir = &#34;../..&#34;</span>
+languageCode = <span style="color:#ed9d13">&#34;en-us&#34;</span>
+baseurl = <span style="color:#ed9d13">&#34;/&#34;</span>
+title = <span style="color:#ed9d13">&#34;DocuAPI Example Site&#34;</span>
+</code></pre></div><p>The config should look like this.</p>
+<p><img src="/docs/img/edited-toml.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h3 id="edit-the-netlify-configuration-file">Edit the Netlify configuration file</h3>
+<blockquote>
+<p>You need to edit the Netlify configuration file for correct deploy to the Netlify service.</p>
+</blockquote>
+<p>To edit the Netlify config:</p>
+<ol>
+<li>
+<p>In VSCode, select the <code>netlify.toml</code> file. In my case, it&rsquo;s located in <code>c:\Users\ivanc\docuapi\themes\docuapi\</code>.</p>
+<p><img src="/docs/img/netlify.toml.png" alt="img"></p>
+</li>
+<li>
+<p>Edit the file.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[context.production.environment]
+HUGO_VERSION = <span style="color:#ed9d13">&#34;0.78.1&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Change the value for <code>HUGO_VERSION</code> to your Hugo version.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To find out your Hugo version, enter <code>hugo version</code> in the Command Prompt.
+
+</div>
+
+<p>The edited <code>netlify.toml</code> file should look like this.</p>
+<p><img src="/docs/img/netlify-file.png" alt="img"></p>
+</li>
+<li>
+<p>Move the <code>netlify.toml</code> file from the theme folder <code>c:\Users\ivanc\docuapi\themes\docuapi\</code> to the project root folder <code>c:\Users\ivanc\docuapi\</code>.</p>
+</li>
+</ol>
+<h3 id="upload-project-folder-to-github">Upload project folder to GitHub</h3>
+<p>To upload the project folder to GitHub:</p>
+<ol>
+<li>
+<p>In VSCode, open the project folder.</p>
+</li>
+<li>
+<p>Select the <strong>Source Control</strong> icon.</p>
+<p><img src="/docs/img/source-control.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Publish to GitHub public repository</strong>.</p>
+<p>When the project folder has been uploaded to the GitHub repository, you will see the success message.</p>
+</li>
+<li>
+<p>Select <strong>Open in GitHub</strong> to view your project folder uploaded and synced to the GitHub repository.</p>
+<p><img src="/docs/img/github-repo-docuapi.png" alt="img"></p>
+</li>
+</ol>
+<hr>
+<h3 id="publish-with-netlify">Publish with Netlify</h3>
+<p>To publish your site online:</p>
+<ol>
+<li>
+<p>Log in to <a href="https://www.netlify.com/">Netlify</a>.</p>
+</li>
+<li>
+<p>Select <strong>New site from Git</strong>.</p>
+<p><img src="/docs/img/new-site-netlify.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>GitHub</strong>.</p>
+</li>
+<li>
+<p>Select your <strong>docuapi</strong> repository.</p>
+<p><img src="/docs/img/docuapi-repo.png" alt="img"></p>
+</li>
+<li>
+<p>In the <strong>Build Command</strong> field, enter <code>hugo</code>.</p>
+</li>
+<li>
+<p>In the <strong>Publish directory</strong> field, enter <code>public</code>.</p>
+</li>
+<li>
+<p>Select <strong>Deploy site</strong>.</p>
+<p><img src="/docs/img/deploy-site.png" alt="img"></p>
+<p>Wait until Netlify deploys your site with some funny name. You should see the green <strong>Published</strong> message.</p>
+</li>
+<li>
+<p>To change the site name, select <strong>Site settings</strong>.</p>
+<p><img src="/docs/img/site-settings.png" alt="img"></p>
+</li>
+<li>
+<p>Select <strong>Change site name</strong> and enter the available name. In my case, it&rsquo;s <code>docuapi-test</code>.</p>
+<p><img src="/docs/img/change-name-docuapi.png" alt="img"></p>
+<p>Your site should be available now. You can view my test API documentation site here:</p>
+<p><a href="https://docuapi-test.netlify.app/">https://docuapi-test.netlify.app/</a></p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5e2baa65e699c316d141b4f390fcb349">6 - How to remove Hugo from Windows</h1>
+    <div class="lead">Sometimes you need to delete or uninstall Hugo that you&rsquo;ve installed on Windows. I failed to find the instructions on the internet. Here&rsquo;s the way to remove Hugo from your computer.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Our goal is to remove Hugo static site generator installed on Windows.</p>
+
+</div>
+
+<h2 id="check-hugo-version">Check Hugo version</h2>
+<p>You can check if Hugo is installed by running this command in the Command Prompt: <code>hugo version</code></p>
+<p>If you see the Hugo version, it means Hugo is installed on your computer.</p>
+<p><img src="/docs/img/hugo-version.png" alt="img"></p>
+<hr>
+<h2 id="find-out-how-you-installed-hugo">Find out how you installed Hugo</h2>
+<p>Now I don&rsquo;t remember exactly the method that I used to install Hugo. If you go to the <a href="https://gohugo.io/getting-started/installing/">Hugo install page</a>, there are several methods for installing Hugo on Windows. I recall that I used Chocolatey (Windows) as my installation method.</p>
+<p>If you used Chocolatey, try this command first: <code>choco uninstall hugo</code></p>
+<p>If you see this message, you should use the last resort.</p>
+<p><img src="/docs/img/choco-uninstall.png" alt="img"></p>
+<hr>
+<h2 id="remove-hugo-folder">Remove Hugo folder</h2>
+<p>In your file explorer, find and delete the Hugo folder.</p>
+<p>In my case, it&rsquo;s <code>C:\ProgramData\chocolatey\lib\hugo-extended</code></p>
+<p><img src="/docs/img/hugo-folder.png" alt="img"></p>
+<p>Now check the Hugo version: <code>hugo version</code></p>
+<p>If you see this message, Hugo is uninstalled.</p>
+<p><img src="/docs/img/hugo-uninstalled.png" alt="img"></p>
+<hr>
+<h2 id="remove-chocolatey-from-windows">Remove Chocolatey from Windows</h2>
+<p>As a bonus, here&rsquo;s how to uninstall Chocolatey from your computer.</p>
+<ol>
+<li>
+<p>Check if Chocolatey is installed on your computer: <code>choco version</code></p>
+<p><img src="/docs/img/choco-version.png" alt="img"></p>
+</li>
+<li>
+<p>Find the folder with Chocolatey and delete it.</p>
+<p>In my case it is <code>C:\ProgramData\chocolatey</code></p>
+<p><img src="/docs/img/choco-folder.png" alt="img"></p>
+</li>
+<li>
+<p>Enter the command <code>choco version</code>.</p>
+<p>You should see this message.</p>
+<p><img src="/docs/img/choco-not-installed.png" alt="img"></p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Send email" aria-label="Send email">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:ivancheban@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="LinkedIn" aria-label="LinkedIn">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/ivan-cheban-a24b576">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Telegram" aria-label="Telegram">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="http://t.me/ivan_cheban">
+      <i class="fab fa-telegram"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/ivancheban/docsy-site">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2020 Ivan Cheban — All Rights Reserved</small>
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.460c8ae21829f9b330823a08f34ac961d7d0daa8874c8c9eba7ea0484bb42a79.js" integrity="sha256-RgyK4hgp&#43;bMwgjoI80rJYdfQ2qiHTIyeun6gSEu0Knk=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
