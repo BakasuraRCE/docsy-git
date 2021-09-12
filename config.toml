@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/docsy-git"
 title = "Documentation Portal"
 
 enableRobotsTXT = true
